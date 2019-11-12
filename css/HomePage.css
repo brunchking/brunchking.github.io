@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
+
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.flex-container {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#myVideo {
+    height: 90vh;
+    margin-top: 10px;
+}
+
+body {
+    background-color:#18171c;
+
+}
+
+.tools {
+    padding: 20px;
+    border: 1px white solid;
+    margin-left: 80px;
+    text-align: center;
+}

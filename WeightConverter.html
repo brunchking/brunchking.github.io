@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>體重轉換器</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/WeightConverter.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <a href="index.html" onclick="goBack()"><img src="media/27-512.png" style="width: 50px; height:50px; "></a>
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center mb-3">重量單位轉換器</h1>
+                <form>
+                    <div class="form-group">
+                        <input id="Input" type="number" class="form-control form-control-lg" placeholder="請輸入公克...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>磅:</h4>
+                            <div id="poundsOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-success mb-2">
+                        <div class="card-body">
+                            <h4>公斤:</h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-danger mb-2">
+                        <div class="card-body">
+                            <h4>盎司:</h4>
+                            <div id="ozOutput"></div>
+                        </div>
+                    </div>
+                    <div class="bg-info mb-2">
+                        <div class="card-body">
+                            <h4>台斤:</h4>
+                            <div id="twkgOutput"></div>
+                        </div>
+                    </div>
+                    <div class="bg-warning mb-2">
+                        <div class="card-body">
+                            <h4>公噸:</h4>
+                            <div id="tonsOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        document.getElementById("output").style.visibility = "hidden";
+        document.getElementById("Input").addEventListener("input", function (e) {
+            document.getElementById("output").style.visibility = "visible";
+            let x = e.target.value;
+            document.getElementById("poundsOutput").innerHTML = (x * 0.0022046).toFixed(7);
+            document.getElementById("kgOutput").innerHTML = x / 1000;
+            document.getElementById("ozOutput").innerHTML = x * 0.035274;
+            document.getElementById("twkgOutput").innerHTML = (x / 600).toFixed(7);
+            document.getElementById("tonsOutput").innerHTML = (x / 1000000).toFixed(7);
+        });
+
+    </script>
+</body>
+
+</html>

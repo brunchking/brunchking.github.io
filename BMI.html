@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>BMI計算</title>
+	<script src="js/BMI.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/BMI.css">
+</head>
+
+
+<body>
+	<form method=post id="theForm">
+		<fieldset>
+			<div class="container">
+				<a href="index.html" onclick="goBack()"><img src="media/27-512.png"
+						style="width: 50px; height:50px;"></a>
+				<div class="row">
+					<div class="col-md-6 offset-md-3">
+						<h1 class="text-center mb-3">BMI</h1>
+						<form class="form-1">
+							<!-- input -->
+							<div class="form-group">
+								<input type="text" name="height" class="result  form-control form-control-lg"
+									placeholder="請輸入身高(公分)...">
+							</div>
+							<!-- input -->
+							<!-- input -->
+							<div class="form-group">
+								<input type="text" name="weight" class="result form-control form-control-lg"
+									placeholder="請輸入體重(公斤)...">
+							</div>
+							<!-- input -->
+							<!--button-->
+
+							<div class="btn">
+								<input type="button" value="開始計算" onclick="Cal(this.form)"
+									class="bg-danger btn-secondary btn-lg">
+							</div>
+
+							<!--button-->
+							<!--結果方塊-->
+							<div class="bg-primary mb-2">
+								<div class="card-body">
+									<div class="result">
+										<h4>您的BMI:</h4>
+										<input type=text name="BMI" class="result form-control form-control-lg"></input>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>溫度轉換器</title>
+    <script src="js/Ctof.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/CtoF.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" onclick="goBack()"><img src="media/27-512.png" style="width: 50px; height:50px;"></a>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center mb-3">溫度轉換器</h1>
+                <form class="form-1">
+                    <!--攝氏方塊-->
+                    <div class="bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>攝氏轉華氏:</h4>
+                        </div>
+                    </div>
+                    <!--攝氏方塊-->
+                    <!-- input -->
+                    <div class="form-group">
+                        <input id="Celsius" type="number" class="form-control form-control-lg"
+                            placeholder="請輸入攝氏(Celsius)...">
+                    </div>
+                    <!-- input -->
+                    <!--結果方塊-->
+                    <div class="bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>轉換結果:</h4>
+                            <div id="FahrenheitOutput"></div>
+                        </div>
+                    </div>
+                </form>
+                <!--結果方塊-->
+
+                <form class="form-2">
+                    <!--華氏方塊-->
+                    <div class="bg-danger mb-2">
+                        <div class="card-body">
+                            <h4>華氏轉攝氏:</h4>
+                        </div>
+                    </div>
+                    <!--華氏方塊-->
+                    <!-- input -->
+                    <div class="form-group">
+                        <input id="Fahrenheit" type="number" class="form-control form-control-lg"
+                            placeholder="請輸入華氏(Fahrenheit)...">
+                    </div>
+                    <!-- input -->
+                    <!--結果方塊-->
+                    <div class="bg-danger mb-2">
+                        <div class="card-body">
+                            <h4>轉換結果:</h4>
+                            <div id="CelsiustOutput"></div>
+                        </div>
+                    </div>
+                    <!--結果方塊-->
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("Celsius").addEventListener("input", function (e) {
+            let x = e.target.value;
+            document.getElementById("FahrenheitOutput").innerHTML = x * (9 / 5) + 32;
+        });
+        document.getElementById("Fahrenheit").addEventListener("input", function (e) {
+            let x = e.target.value;
+            document.getElementById("CelsiustOutput").innerHTML = (x - 32) * 5 / 9;;
+        });
+    </script>
+</body>
+
+</html>
